@@ -1,0 +1,28 @@
+{
+    "warehouses": [
+        {
+            "id": 1,
+            "name": "pedro"
+        },
+        {
+            "id": 2,
+            "name": "parangarukutitimicuaro"
+        }
+    ],
+    "shipments": [],
+    "drivers": [
+        {
+            "name": "Driver Name",
+            "id": 1
+        },
+        {
+            "name": "Driver Name",
+            "id": 2
+        },
+        {
+            "name": "Driver NameASAs",
+            "id": 3
+        }
+    ],
+    "vehicles": []
+}
