@@ -1,17 +1,15 @@
-function erroHandler(err,req,res,next){
-    if(err){
-        console.log("no puedes pasar porque hay un error");
-    }
-    else{
-        next();
-    }
+function erroHandler(err, req, res) {
+  console.error("Error encontrado:", err);
+
+  const statusCode = err.statusCode || 500;
+
+  res.status(statusCode);
+
+  res.json({
+    error: {
+      message: err.message || "Ha ocurrido un error en el servidor.",
+    },
+  });
 }
 
-
-function verifyParams(req,res,next){
-    const id=req.params.id;
-    if(!id) res.status(401).json({message:"NO PUEDES ACCEDER AL RECURSO SIN UN ID"});
-    else next();
-}
-
-module.exports={verifyParams,erroHandler}
+module.exports = { verifyParams, erroHandler };
